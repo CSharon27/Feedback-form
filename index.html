@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedbackHub - Your Feedback Matters</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Feedback<span>Hub</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#feedback" class="nav-link">Feedback</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#feedback" class="btn btn-primary nav-btn">Give Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Your Feedback Helps Us Improve</h1>
+                <p>We value your opinion. Share your experience with us to help us serve you better and create improved products.</p>
+                <a href="#feedback" class="btn btn-primary btn-lg">Share Your Feedback</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero_illustration.png" alt="Feedback Illustration">
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Feedback Matters</h2>
+                <p>Here's how we ensure your voice is heard.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-paper-plane"></i></div>
+                    <h3>Easy to Submit</h3>
+                    <p>Our intuitive form makes submitting feedback quick and effortless.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Quick Response</h3>
+                    <p>We review all feedback promptly to address your concerns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-user-check"></i></div>
+                    <h3>User-Friendly</h3>
+                    <p>Designed with you in mind for a smooth and pleasant experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Secure & Private</h3>
+                    <p>Your data is protected. We value and respect your privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section id="feedback" class="feedback-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>We'd Love to Hear From You</h2>
+                <p>Please fill out the form below to share your thoughts.</p>
+            </div>
+            
+            <div class="form-card">
+                <form id="feedbackForm">
+                    <!-- Form Fields -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="fullName" placeholder="John Doe" required>
+                        </div>
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                        </div>
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-list"></i>
+                            <select id="category" required>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="Website">Website Experience</option>
+                                <option value="Service">Customer Service</option>
+                                <option value="Product">Product Quality</option>
+                                <option value="Support">Technical Support</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <div class="rating-container">
+                            <div class="star-rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent"><i class="fa-solid fa-star"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Good"><i class="fa-solid fa-star"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Average"><i class="fa-solid fa-star"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Fair"><i class="fa-solid fa-star"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Poor"><i class="fa-solid fa-star"></i></label>
+                            </div>
+                            <span class="rating-text" id="ratingText">Select a rating</span>
+                        </div>
+                        <span class="error-msg" id="ratingError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Feedback Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell us about your experience..." required minlength="10"></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>Would you recommend us?</label>
+                        <div class="radio-options">
+                            <label class="radio-btn">
+                                <input type="radio" name="recommend" value="Yes" checked>
+                                <span>Yes</span>
+                            </label>
+                            <label class="radio-btn">
+                                <input type="radio" name="recommend" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+                        <button type="submit" class="btn btn-primary btn-block">Submit Feedback</button>
+                    </div>
+                </form>
+                
+                <!-- Success Message (Hidden by default) -->
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">
+                        <i class="fa-solid fa-check-circle"></i>
+                    </div>
+                    <h3>Thank You!</h3>
+                    <p>Your feedback has been submitted successfully.</p>
+                    <button class="btn btn-primary" id="newFeedbackBtn">Submit Another Response</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>FeedbackHub</h3>
+                <p>Helping businesses grow through valuable user insights.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i> support@feedbackhub.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +1 234 567 890</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FeedbackHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
